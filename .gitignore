@@ -1,0 +1,15 @@
+.htaccess
+*.sql
+*.htaccess
+wp-config
+wp-admin
+wp-admin/*
+wp-includes/*
+wp-content/ai1wm-backups
+wp-content/backupwordpress-d24a760ef6-backups
+wp-content/cache
+wp-content/plugins
+wp-content/upgrade
+wp-content/uploads
+wp-content/w3tc-config
+wp-content/deleteme.0b961daf93fc447fbd56b52ca73be33d.php
