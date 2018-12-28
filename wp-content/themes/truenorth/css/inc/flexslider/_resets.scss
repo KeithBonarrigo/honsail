@@ -1,0 +1,33 @@
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+
+
+.ci-container,
+.ci-slider {
+
+  a:hover,
+  a:focus {
+
+    outline: none;
+
+  }
+
+}
+
+.slides,
+.slides > li,
+.ci-control-nav,
+.ci-direction-nav {
+  
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
+
+}
+
+.ci-pauseplay span {
+
+  text-transform: capitalize;
+
+}

@@ -1,0 +1,20 @@
+/*
+Theme Name: Honsail
+Theme URL: http://keithbonline.com
+Description: Honsail Child Theme
+Author: Keith Bonarrigo
+Author URL:  http://keithbonline.com
+Template: truenorth
+Version: 1.0.0
+Text Domain: truenorth-child
+Custom CSS goes after this line
+*/ 
+
+.hero { margin: 0px; }
+.logo { position: relative; top:20%; left:55%; text-align: left; }
+.nav-hold { position: relative; margin-bottom:30px; }
+
+.navigation a { font-size:14px; }
+
+/*general page styling */
+h1.entry-title { color: #CE0000; }

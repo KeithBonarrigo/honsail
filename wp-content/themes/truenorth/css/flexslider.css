@@ -1,0 +1,297 @@
+@charset "UTF-8";
+
+/*
+ * jQuery FlexSlider v2.5.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ *
+ * Modified for CSSIgniter Themes
+ */
+
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+
+.ci-container a:hover,
+.ci-container a:focus,
+.ci-slider a:hover,
+.ci-slider a:focus {
+  outline: none;
+}
+
+.slides,
+.slides > li,
+.ci-control-nav,
+.ci-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ci-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+
+.ci-slider {
+  margin: 0;
+  padding: 0;
+}
+
+.ci-slider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+.ci-slider .slides img {
+  width: 100%;
+  display: block;
+}
+
+.ci-slider .slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+html[xmlns] .ci-slider .slides {
+  display: block;
+}
+
+* html .ci-slider .slides {
+  height: 1%;
+}
+
+.no-js .ci-slider .slides > li:first-child {
+  display: block;
+}
+
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+
+.ci-slider {
+  margin: 0;
+  background: transparent;
+  border: none;
+  position: relative;
+  zoom: 1;
+  border-radius: 5px;
+  -o-box-shadow: "" 0 0 0 transparent;
+  box-shadow: "" 0 0 0 transparent;
+}
+
+.ci-slider .slides {
+  zoom: 1;
+}
+
+.ci-slider .slides img {
+  height: auto;
+}
+
+.ci-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.loading .ci-viewport {
+  max-height: 300px;
+}
+
+.carousel li {
+  margin-right: 5px;
+}
+
+.ci-direction-nav {
+  *height: 0;
+}
+
+.ci-direction-nav a {
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: #FFF;
+  text-shadow: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.ci-direction-nav a:before {
+  font-family: "FontAwesome";
+  font-size: 40px;
+  display: inline-block;
+  content: "";
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+}
+
+.ci-direction-nav a.ci-next:before {
+  content: "";
+}
+
+.ci-direction-nav .ci-prev {
+  left: 10px;
+}
+
+.ci-direction-nav .ci-next {
+  right: 10px;
+  text-align: right;
+}
+
+.ci-slider:hover .ci-direction-nav .ci-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+
+.ci-slider:hover .ci-direction-nav .ci-prev:hover {
+  opacity: 1;
+}
+
+.ci-slider:hover .ci-direction-nav .ci-next {
+  opacity: 0.7;
+  right: 10px;
+}
+
+.ci-slider:hover .ci-direction-nav .ci-next:hover {
+  opacity: 1;
+}
+
+.ci-direction-nav .ci-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+.ci-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+.ci-pauseplay a:before {
+  font-family: "FontAwesome";
+  font-size: 20px;
+  display: inline-block;
+  content: "";
+}
+
+.ci-pauseplay a:hover {
+  opacity: 1;
+}
+
+.ci-pauseplay a.ci-play:before {
+  content: "";
+}
+
+.ci-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+
+.ci-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.ci-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.ci-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.ci-control-paging li a.ci-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+.ci-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+
+.ci-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+.ci-control-thumbs img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.ci-control-thumbs img:hover {
+  opacity: 1;
+}
+
+.ci-control-thumbs .ci-active {
+  opacity: 1;
+  cursor: default;
+}
+
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+
+@media screen and (max-width: 860px) {
+  .ci-direction-nav .ci-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  .ci-direction-nav .ci-next {
+    opacity: 1;
+    right: 10px;
+  }
+}

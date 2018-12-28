@@ -1,0 +1,94 @@
+/* -----------------------------------------
+   06. Comments
+----------------------------------------- */
+#comments {
+	margin: 40px 0 0;
+}
+
+#comment-list {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+
+	ol {
+		list-style: none;
+
+		@media ( max-width: $screen-xs-max ) {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.comment-body {
+		margin-bottom: 20px;
+		padding-top: 20px;
+	}
+
+	> .comment:first-child > .comment-body {
+		border-top: none;
+		padding-top: 0;
+	}
+}
+
+.post-comments {
+	margin: 0 0 45px;
+}
+
+.comment-author .avatar {
+	width: 64px;
+	height: 64px;
+	float: left;
+	margin: 0 15px 15px 0;
+	overflow: visible;
+
+	@media ( max-width: $screen-xs-max ) {
+		display: none;
+	}
+}
+
+.comment-content {
+	overflow: hidden;
+	zoom: 1;
+	font-size: 13px;
+}
+
+.comment-metadata {
+	font-size: 12px;
+	margin: 0 0 5px;
+}
+
+.comment-reply-link {
+	@extend .btn;
+	font-size: 10px;
+	text-transform: uppercase;
+	padding: 4px 10px;
+	margin-left: 80px;
+	height: auto;
+	width: auto;
+
+	@media ( max-width: $screen-xs-max ) {
+		margin: 0;
+	}
+}
+
+.bypostauthor > article .fn:before {
+	font-family: FontAwesome;
+	content: "\f005";
+	margin: 0 2px 0 -2px;
+	position: relative;
+	top: -1px;
+	font-size: 11px;
+}
+
+#cancel-comment-reply-link {
+	font-size: 13px;
+	font-weight: normal;
+	margin-left: 5px;
+}
+
+.form-allowed-tags,
+.comment-notes {
+	font-size: 12px;
+	line-height: 1.5;
+	color: rgba($text-color, 0.8);
+}

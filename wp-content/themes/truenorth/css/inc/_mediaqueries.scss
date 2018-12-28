@@ -1,0 +1,43 @@
+/* -----------------------------------------
+	11. Global Mediaqueries
+----------------------------------------- */
+
+@media ( max-width: $screen-md-max ) { }
+
+@media ( max-width: $screen-sm-max ) {
+
+	.footer {		
+		.sticky-area {
+			&.bottom {			
+				height: 25px;
+			}
+
+			&.left {
+				width: 25px;
+			}
+
+			&.right {
+				width: 25px;
+			}		
+		}
+	}
+
+}
+
+@media ( max-width: $screen-xs-max ) {
+	.main-nav {
+		display: none;
+	}
+	.footer-widgets {
+		padding: 50px 35px;
+	}	
+}
+
+
+@media ( max-width: 820px ) {
+	.footer {		
+		.sticky-area {
+			display: none;			
+		}
+	}
+}
