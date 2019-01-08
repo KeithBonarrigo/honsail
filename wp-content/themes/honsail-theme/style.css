@@ -9,12 +9,20 @@ Version: 1.0.0
 Text Domain: truenorth-child
 Custom CSS goes after this line
 */ 
-
+a {text-decoration:underline !important; }
 .hero { margin: 0px; }
-.logo { position: relative; top:20%; left:55%; text-align: left; }
+.logo { position: relative; top:20%; /* left:55%; */ text-align: left; }
 .nav-hold { position: relative; margin-bottom:30px; }
 
 .navigation a { font-size:14px; }
 
 /*general page styling */
-h1.entry-title { color: #CE0000; }
+h1.entry-title, h2.entry-title  { color: #CE0000; }
+h1, h2  { color: #CE0000; }
+
+.boat-data { flex-basis:75% }
+.boat-gallery { flex-basis:25% }
+.boat-gallery .wp-block-gallery { margin-top:0px !important }
+
+
+

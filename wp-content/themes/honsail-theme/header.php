@@ -16,15 +16,12 @@
 	</div>
 
 	<header class="header">
-
-		
-
 		<div class="hero">
 			<div class="logo">
-				<?php ci_e_logo( '<h1>', '</h1>' ); ?>
-				<?php ci_e_slogan( '<p class="site-tagline">', '</p>' ); ?>
-			</div><!-- /.logo -->
-		</div><!-- /.hero -->
+				<?php //ci_e_logo( '<h1>', '</h1>' ); ?>
+				<?php //ci_e_slogan( '<p class="site-tagline">', '</p>' ); ?>
+			</div>
+		</div>
         <div class="nav-hold">
 			<nav class="main-nav nav">
 				<?php wp_nav_menu( array(
@@ -37,13 +34,16 @@
 			</nav>
 
 			<div id="mobilemenu"></div>
-		</div><!-- /.nav-hold -->
-
+		</div>
 	</header>
-
   <?php if ( ! is_page_template( 'template-builder.php' ) ): ?>
 	<main class="main">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
+				<?php	
+				if ( function_exists('yoast_breadcrumb') ) {
+  					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+				}
+				?>
   <?php endif; ?>				
