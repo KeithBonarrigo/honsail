@@ -18,8 +18,8 @@
 	<header class="header">
 		<div class="hero">
 			<div class="logo">
-				<?php //ci_e_logo( '<h1>', '</h1>' ); ?>
-				<?php //ci_e_slogan( '<p class="site-tagline">', '</p>' ); ?>
+				<?php ci_e_logo( '<h1>', '</h1>' ); ?>
+				<?php ci_e_slogan( '<p class="site-tagline">', '</p>' ); ?>
 			</div>
 		</div>
         <div class="nav-hold">

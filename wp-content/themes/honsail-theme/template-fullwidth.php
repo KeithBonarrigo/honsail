@@ -1,13 +1,14 @@
-<?php 
-/**
- * Template Name: Homepage Template
- *
- * 
- */
-get_header(); ?>
-<style>
-#breadcrumbs { display:none; }
-</style>
+<?php
+/*
+Template Name: Full Width
+*/
+?>
+
+<?php get_header(); ?>
+<script>
+    w = $('#home-google-map').width();
+    alert(w);
+</script>
 <div class="row">
 	<div class="col-md-12">
 
@@ -22,7 +23,7 @@ get_header(); ?>
 					</figure>
 				<?php endif; ?>
 
-				<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h2 class="entry-title"><?php the_title(); ?></h2>
 
 				<div class="entry-content group">
 					<?php the_content(); ?>
@@ -32,8 +33,8 @@ get_header(); ?>
 				<?php comments_template(); ?>
 
 			</article><!-- /.entry -->
-        <?php endwhile; ?>
-        
+		<?php endwhile; ?>
+
 	</div><!-- /.col-md-12 -->
 </div><!-- /.row -->
 

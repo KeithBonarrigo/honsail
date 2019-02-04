@@ -9,20 +9,76 @@ Version: 1.0.0
 Text Domain: truenorth-child
 Custom CSS goes after this line
 */ 
-a {text-decoration:underline !important; }
-.hero { margin: 0px; }
-.logo { position: relative; top:20%; /* left:55%; */ text-align: left; }
-.nav-hold { position: relative; margin-bottom:30px; }
-
+.main { margin-bottom:0px; }
+.entry, .logo.footer-logo { margin-bottom:20px; }
+.entry-content { margin:0px 15px; border:1px solid #999; border-width:1px 0px; }
+a {text-decoration:underline; }
 .navigation a { font-size:14px; }
+.row a {color:#0000CC; }
+.current-menu-item { }
 
 /*general page styling */
-h1.entry-title, h2.entry-title  { color: #CE0000; }
+.slim { width:1px !important; }
+
+.logo { position: relative; top:33%; text-align: left; }
+.logo h1 a img, .logo h1 p { margin-left:20px; }
+.inner .hero { height: 160px; }
+.hero { background-position: 200px 20px; margin: 0px; background-color:#fcfefc !important; background-repeat:no-repeat; background-size:auto; }
+.logo p { margin: 0px 0px 0px 48px; color:#0000CC; }
+
+.nav-hold { position: relative; margin-bottom:15px; }
+.main-nav { background-color:#FFF; border:solid #CE0000 2px; border-width:2px 0px; }
+#breadcrumbs { margin-top:3px; margin-bottom:3px;  }
+.fine-print { font-size:11px; color: #CE0000; }
+
+article.entry { /* border:solid 1px grey; border-width:1px 0px; */ padding:10px 0px; }
+.entry-content { background-color:#FFF; padding: 10px; }
+.row h1.entry-title, h2.entry-title  { color: #CE0000;  }
 h1, h2  { color: #CE0000; }
+h2 { font-size:24px; } 
+.entry-featured { display:none; }
+.navigation a { text-decoration-color: #CE0000; }
 
 .boat-data { flex-basis:75% }
 .boat-gallery { flex-basis:25% }
 .boat-gallery .wp-block-gallery { margin-top:0px !important }
+
+.top-level-thumb { float:left; width:150px; vertical-align:top; margin:0px 20px 20px 10px; }
+.top-level-link { font-size:16px; letter-spacing:1px; }
+.top-level-child { clear:both; margin-bottom:15px; }
+
+.centered { text-align:center }
+.content-indent { padding:7px; }
+.content-indent-heavy { padding:14px; }
+
+.quote, .quote-first, .quote-last { font-style:italic; font-size:15px; padding-left: 50px; padding-right:50px; }
+.quote, .quote-first { padding-top:20px; }
+.quote::before, .quote-first::before, .quote-last::after, .quote::after { content:'"'; font-weight:bold; font-size:20px; line-height:14px; }
+.quote-author { padding-left:65px; font-size:13px; }
+
+ul.indented-list { padding-left:35px; }
+ul.indented-list li { list-style: none; }
+ul.indented-list li::before { content: "- "; text-indent: -7px;}
+
+.entry-content h4, .wp-block-column h4, .wp-block-column h3 { margin-bottom:0px !important; }
+img.content-thumb { border: 1px solid #d2d2d6; }
+
+.row p { text-indent: 0px; }
+.row a.top-level-link { color: #CE0000; }
+.row a.top-level-more-info { padding-left:10px; }
+div.top-level-title { margin-bottom:3px; }
+div.top-level-more-info { margin-top:7px; }
+.content-top-template{ font-size:14px; padding-top:2px; }
+
+.right-floater { float:right; margin-left:7px; max-width:240px; }
+
+.rate-table td { width:14%; vertical-align: top; }
+.rate-table col:nth-child(2n) { background-color:#e2e1e8; }
+
+footer { border:solid 2px #CE0000; border-width:3px 0px 0px 0px; background-color:#070567; color:#FFF; }
+.footer-logo a { text-decoration: none !important; }
+.footer-logo p { color:#FFF; }
+footer a { color:#FFF !important; } 
 
 
 

@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <?php get_template_part( 'inc_section_title' ); ?>
 
 <?php if( ci_setting( 'blog_layout' ) == 'sidebar' ): ?>
